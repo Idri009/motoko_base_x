@@ -1092,6 +1092,24 @@ test(
         inputFormat = #atprotoSortable;
         expected = "wufuftowpnoepbk";
       },
+      {
+        input = "\00\00\00\00\00\00\00\01";
+        outputFormat = #atprotoSortable;
+        inputFormat = #atprotoSortable;
+        expected = "2222222222224";
+      },
+      {
+        input = "\00\00\00\00\00\00\00\00";
+        outputFormat = #atprotoSortable;
+        inputFormat = #atprotoSortable;
+        expected = "2222222222222";
+      },
+      {
+        input = "\00\00\00\00\00\00\04\00";
+        outputFormat = #atprotoSortable;
+        inputFormat = #atprotoSortable;
+        expected = "2222222222422";
+      },
     ];
 
     for (testCase in testCases.vals()) {
